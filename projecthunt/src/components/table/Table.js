@@ -38,7 +38,7 @@ function Table(props) {
     <div style={style} className={className}>
       <TableHeader columnConfigs={columnConfigs} />
       {loading && <Loader />}
-      {_isEmpty(data) && (
+      {_isEmpty(data) && !loading && (
         <div className={styles.placeholder}> {"No Rows Found !"} </div>
       )}
       {!loading && data.map(renderRow(columnConfigs, rowHeight))}

@@ -2,6 +2,7 @@ import ACTION_TYPES from "../tableManager/constants/tableManager.actionTypes";
 
 const fetchProjects = async (setState) => {
     try {
+      setState({ loading: true})
       const response = await fetch(
         "https://raw.githubusercontent.com/saaslabsco/frontend-assignment/refs/heads/master/frontend-assignment.json"
       );
@@ -18,7 +19,7 @@ const fetchProjects = async (setState) => {
   };
 
 
-const handleTableItemsFetch = async ({ getState, setState }) => {
+const handleTableItemsFetch = async ({ setState }) => {
     const data = await fetchProjects(setState);
     setState({ data });
 }

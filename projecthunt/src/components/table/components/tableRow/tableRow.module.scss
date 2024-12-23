@@ -1,0 +1,19 @@
+.rowContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: fit-content;
+}
+.rowContainer:hover{
+    background-color: aliceblue;
+}
+
+.tableCell{
+    padding: 4px 0px 4px 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 28px;
+      display: flex;
+    align-items: center;
+}
